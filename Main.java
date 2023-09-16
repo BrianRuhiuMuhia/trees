@@ -71,7 +71,7 @@ public void postOrder(Node node)
     preOrder(node.right);  
     System.out.println(node.data);
 }
-public void bfs(Node node)
+public void levelOrder(Node node)
 {
 ArrayList<Node>queue=new ArrayList<>();
 queue.add(node);
