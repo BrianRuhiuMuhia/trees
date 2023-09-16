@@ -18,7 +18,7 @@ class BinarySearchTree{
 int data=0;
 Node left=null;
 Node right=null;
-public Node(int data){
+private Node(int data){
     this.data=data;
 }
 public String toString()
@@ -33,7 +33,7 @@ public void insertNode(int value)
 {
 this.root=insert(value,this.root);
 }
-public Node insert(int value,Node node)
+private Node insert(int value,Node node)
 {
 if(node==null)
 {
