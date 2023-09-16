@@ -86,4 +86,27 @@ while(queue.isEmpty()!=true)
     queue.add(curr.right);
 }
 }
+ public int height(Node node)
+{
+    if(node==null)
+    return -1;
+    else return Math.max(height(node.left),height(node.right)) +1;
+}
+public Boolean search(int value,Node node)
+{
+if(node==null)
+return false;
+if(value==node.data)
+return true;
+else return search(value, node.left) | search(value,node.right);
+}
+public Boolean isBalanced(Node node)
+{
+if(node==null)
+{
+    return false;
+}
+else return height(node.left)>height(node.right) & isBalanced(node.left) & isBalanced(node.right);
+}   
+}
 }
