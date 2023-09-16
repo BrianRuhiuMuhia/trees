@@ -25,6 +25,9 @@ public String toString()
 {
     return String.valueOf(this.data);
 }
+        public Boolean equals(Node obj)
+        {
+return this.data==obj.data & node.left==obj.left & node.right==obj.right;
     }
 public void insertNode(int value)
 {
