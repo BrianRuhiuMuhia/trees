@@ -13,7 +13,7 @@ bst.bfs(bst.root);
 
 }
 class BinarySearchTree<T>{
-    Node root=null;
+    Node<T> root=null;
     private class Node<T>{
 T data=0;
 Node<T> left=null;
