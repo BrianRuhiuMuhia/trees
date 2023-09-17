@@ -23,7 +23,7 @@ private Node(T data){
 }
 public String toString()
 {
-    return String.valueOf(this.data);
+    return (String) this.data;
 }
         public Boolean equals(Node obj)
         {
