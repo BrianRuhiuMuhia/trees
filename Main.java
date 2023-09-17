@@ -12,13 +12,13 @@ bst.bfs(bst.root);
     }
 
 }
-class BinarySearchTree{
+class BinarySearchTree<T>{
     Node root=null;
-    private class Node{
-int data=0;
-Node left=null;
-Node right=null;
-private Node(int data){
+    private class Node<T>{
+T data=0;
+Node<T> left=null;
+Node<T> right=null;
+private Node(T data){
     this.data=data;
 }
 public String toString()
@@ -29,11 +29,11 @@ public String toString()
         {
 return this.data==obj.data & node.left==obj.left & node.right==obj.right;
     }
-public void insertNode(int value)
+public void insertNode(T value)
 {
 this.root=insert(value,this.root);
 }
-private Node insert(int value,Node node)
+private Node insert(T value,Node node)
 {
 if(node==null)
 {
@@ -95,11 +95,12 @@ while(queue.isEmpty()!=true)
     return -1;
     else return Math.max(height(node.left),height(node.right)) +1;
 }
-public Boolean search(int value,Node node)
+public Boolean search(T value,Node node)
 {
 if(node==null)
 return false;
-if(value==node.data)
+Node searchNode=new Node<T>(value);
+if(node.equals(value))
 return true;
 else return search(value, node.left) | search(value,node.right);
 }
