@@ -3,7 +3,7 @@ import java.util.ArrayList;
 class Main{
     public static void main(String[] args)
     {
-BinarySearchTree bst=new BinarySearchTree();
+BinarySearchTree<Integer> bst=new BinarySearchTree<Integer>();
 bst.insertNode(10);
 bst.insertNode(20);
 bst.insertNode(30);
