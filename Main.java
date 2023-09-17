@@ -27,7 +27,7 @@ public String toString()
 }
         public Boolean equals(Node obj)
         {
-return this.data==obj.data & node.left==obj.left & node.right==obj.right;
+return this.data==obj.data & this.left==obj.left & this.right==obj.right;
     }
 public void insertNode(T value)
 {
